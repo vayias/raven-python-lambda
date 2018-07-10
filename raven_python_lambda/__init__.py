@@ -163,8 +163,7 @@ class RavenLambdaWrapper(object):
                          'user_agent': identity.get('userAgent')
                      }
 
-            # Add additional tags for AWS_PROXY endpoints
-            if event.get('requestContext'):
+                # Add additional tags for AWS_PROXY endpoints
                 raven_context['tags'] = {
                     'api_id': event['requestContext']['apiId'],
                     'api_stage': event['requestContext']['stage'],
