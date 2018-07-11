@@ -132,7 +132,6 @@ class RavenLambdaWrapper(object):
             handler.setLevel(self.config['log_level'])
             setup_logging(handler)
 
-
     def __call__(self, fn):
         """Wraps our function with the necessary raven context."""
         @functools.wraps(fn)
